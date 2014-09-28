@@ -228,9 +228,8 @@ jQuery(document).ready(function($) {
     if (endpoint) {
       sendSPARQLQuery({
         endpoint: endpoint,
-        query: queryEditor.getValue(),
-        limit: $('#set-limit').val(),
-        inference: $('#use-inference').val()
+        query: queryEditor.getValue()
+        // limit: $('#set-limit').val()
       });
     }
     else {
