@@ -226,29 +226,29 @@ jQuery(document).ready(function($) {
   $queryForm.submit(function (event) {
     event.preventDefault();
 
-    console.log($endpointURL.val());
+    var endpoint = $endpointURL.val();
+    console.log(endpoint);
 
-    // var environmentParameters = retrieveQueryFields();
-    //var jqxhr = sendSPARQLQuery(environmentParameters);
+    if (endpoint) {
+      sendSPARQLQuery({
+        endpoint: endpoint,
+        query: queryEditor.getValue(),
+        limit: $('#set-limit').val(),
+        inference: $('#use-inference').val()
+      });
+    }
+    else {
+      $('#wait-modal').modal('show');
 
-    $('#wait-modal').modal('show');
+      var $selected = $querySelect.find(':selected');
+      var queryIndex = $selected.attr('data-index');
+      var results = defaultQueries.queries[queryIndex].result;
 
-    var $selected = $querySelect.find(':selected');
-    var queryIndex = $selected.attr('data-index');
-    var results = defaultQueries.queries[queryIndex].result;
+      handleQueryResults(results);
 
-    handleQueryResults(results);
-
-    $('#wait-modal').delay(2000).modal('hide');
+      $('#wait-modal').delay(2000).modal('hide');
+    }
   });
-
-  function retrieveQueryFields () {
-    return {
-      query: queryEditor.getValue(),
-      limit: $('#set-limit').val(),
-      inference: $('#use-inference').val()
-    };
-  }
 
   function sendSPARQLQuery (queryParameters) {
     var timestamp = Date.now();
@@ -256,14 +256,14 @@ jQuery(document).ready(function($) {
     console.log("SPARQL Query " + timestamp);
 
     // var jqxhr : contains the AJAX query.
-    var jqxhr = $.post('http://localhost:8080/complex/request',
-      queryParameters,
+    var jqxhr = $.get(encodeURI(queryParameters.endpoint + '?query=' + queryParameters.query + '&timeout=1000&should-sponge=grab-all&default-graph-uri=http://dbpedia.org'),
       function (data) {
-        handleQueryResults(data.request);
+
       },
       'json'
     )
-    .success(function() {
+    .success(function (data) {
+      console.log(data);
       $('#wait-modal').modal('hide');
       $('#alert-modal').modal('hide');
       $('a[href="#visualization"]').tab('show');
