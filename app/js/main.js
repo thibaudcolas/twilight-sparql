@@ -11,7 +11,6 @@ jQuery(document).ready(function($) {
   var jqxhrSubmit;
 
   var $querySelect = $('#query-select');
-  var environmentSelectClass = 'environment-select';
   var $queryNamespaces = $('.query-namespaces');
 
   // Triple Bench featherweight edition.
@@ -177,15 +176,7 @@ jQuery(document).ready(function($) {
   // Example of what could be inside localStorage.
   storageSetJSON(historyKey, {"items" : [{
     "timestamp" : "05:13:25",
-    "query" : "PREFIX+a%3A+<http%3A%2F%2Fwww.w3.org%2F2000%2F10%2Fannotation-ns%23>%0D%0APREFIX+dc%3A+<http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F>%0D%0APREFIX+foaf%3A+<http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F>%0D%0A%0D%0A%23+Comment!%0D%0A%0D%0ASELECT+%3Fgiven+%3Ffamily%0D%0AWHERE+{%0D%0A++%3Fannot+a%3Aannotates+<http%3A%2F%2Fwww.w3.org%2FTR%2Frdf-sparql-query%2F>+.%0D%0A++%3Fannot+dc%3Acreator+%3Fc+.%0D%0A++OPTIONAL+{%3Fc+foaf%3Agiven+%3Fgiven+%3B%0D%0A+++++++++++++++foaf%3Afamily+%3Ffamily+}+.%0D%0A++FILTER+isBlank(%3Fc)%0D%0A+}",
-    "environment" : {
-      "inseecog" : "memory",
-      "inseepop" : "tdb",
-      "passim" : "sdb",
-      "d2rq" : "memory",
-      "isf" : "d2rq",
-      "taweb" : "sesame"
-    }
+    "query" : "PREFIX+a%3A+<http%3A%2F%2Fwww.w3.org%2F2000%2F10%2Fannotation-ns%23>%0D%0APREFIX+dc%3A+<http%3A%2F%2Fpurl.org%2Fdc%2Felements%2F1.1%2F>%0D%0APREFIX+foaf%3A+<http%3A%2F%2Fxmlns.com%2Ffoaf%2F0.1%2F>%0D%0A%0D%0A%23+Comment!%0D%0A%0D%0ASELECT+%3Fgiven+%3Ffamily%0D%0AWHERE+{%0D%0A++%3Fannot+a%3Aannotates+<http%3A%2F%2Fwww.w3.org%2FTR%2Frdf-sparql-query%2F>+.%0D%0A++%3Fannot+dc%3Acreator+%3Fc+.%0D%0A++OPTIONAL+{%3Fc+foaf%3Agiven+%3Fgiven+%3B%0D%0A+++++++++++++++foaf%3Afamily+%3Ffamily+}+.%0D%0A++FILTER+isBlank(%3Fc)%0D%0A+}"
   }]});
 
   // By default, localStorage only accepts Strings / Arrays / booleans / ints.
@@ -214,13 +205,11 @@ jQuery(document).ready(function($) {
   // Take a history item and create its HTML (a big appended preppended textfield).
   function addHistoryItem(item, index) {
     var htmlHistoryItem = '';
-    var itemEnvironment = JSON.stringify(item.environment);
     var displayQuery = decodeURIComponent(item.query).replace(/\+/g,' ').replace(/\n/g, ' ');
     displayQuery = displayQuery.substring(displayQuery.indexOf('SELECT'));
 
     htmlHistoryItem += '<time class="add-on history-timestamp">'+item.timestamp+'</time>';
     htmlHistoryItem += '<input type="text" data-query="'+item.query+'" data-env="'+itemEnvironment+'" value="'+displayQuery+'" id="history-item'+index+'" class="history-query span3" disabled/>';
-    htmlHistoryItem += '<p class="add-on">'+itemEnvironment.replace(/"/g,'')+'</p>';
     htmlHistoryItem += '<button class="btn history-btn" type="button">Reuse</button>';
 
     $('.history-items').append('<div class="row-fluid"><div class="input-prepend input-append span12">'+htmlHistoryItem+'</div></div>');
@@ -236,7 +225,7 @@ jQuery(document).ready(function($) {
   $queryForm.submit(function (event) {
     event.preventDefault();
 
-    //var environmentParameters = retrieveQueryFields();
+    // var environmentParameters = retrieveQueryFields();
     //var jqxhr = sendSPARQLQuery(environmentParameters);
 
     $('#wait-modal').modal('show');
@@ -251,19 +240,11 @@ jQuery(document).ready(function($) {
   });
 
   function retrieveQueryFields () {
-    var fieldsValues = {
+    return {
       query: queryEditor.getValue(),
       limit: $('#set-limit').val(),
       inference: $('#use-inference').val()
     };
-
-    // For all environment pairing selects.
-    $('.' + environmentSelectClass).each(function (){
-      $this = $(this);
-      fieldsValues[$this.attr('name')] = $this.val();
-    });
-
-    return fieldsValues;
   }
 
   function sendSPARQLQuery (queryParameters) {
