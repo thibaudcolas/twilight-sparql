@@ -1,0 +1,329 @@
+{
+  "head": {
+    "vars": [ "year" , "Oil_millSm" , "Gas_billSm" , "NGL_millSm3" , "Condensate_millSm3" , "Water_millSm3" ]
+  } ,
+  "results": {
+    "bindings": [
+      {
+        "year": { "type": "literal" , "value": "1971" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.357" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1972" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "1.927" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1973" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "1.87" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1974" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.014" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1975" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "10.995" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1976" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.227" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1977" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.643" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.655" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0020" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1978" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "20.644" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "14.201" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.021" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1979" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "22.478" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "20.67" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.044" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "1.128" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1980" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "28.221" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "25.088" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.048" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.44" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1981" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "27.485" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "24.951" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.048" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.168" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1982" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "28.528" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "23.96" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.043" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.286" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1983" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "35.645" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "23.613" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.041" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.68" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1984" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "41.093" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "25.963" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.064" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.642" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1985" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "44.758" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "26.186" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.076" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.968" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1986" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "48.771" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "26.09" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.061" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "3.845" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1987" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "56.959" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "28.151" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.055" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.117" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1988" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "64.723" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "28.33" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.047" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.846" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1989" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "85.983" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "28.738" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.053" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.898" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1990" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "94.542" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "25.479" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.048" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.011" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1991" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "108.51" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "25.027" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.057" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.897" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1992" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "123.999" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "25.834" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.054" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.959" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1993" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "131.843" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "24.804" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.474" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.518" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1994" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "146.282" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "26.842" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "2.403" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.122" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1995" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "156.776" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "27.814" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "3.178" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.942" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1996" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "175.501" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "37.407" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "3.784" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "8.232" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1997" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "175.914" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "42.95" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.376" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "8.074" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1998" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "168.744" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "44.19" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.047" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.39" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "1999" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "168.69" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "48.479" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.512" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "6.992" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "0.0" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2000" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "181.181" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "49.79" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.411" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.225" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "112.162" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2001" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "180.884" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "54.038" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "5.666" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "10.924" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "127.96" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2002" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "173.649" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "65.593" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.323" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "11.798" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "133.675" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2003" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "165.475" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "73.714" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "10.315" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "12.877" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "152.011" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2004" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "162.778" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "78.595" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "8.675" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "13.581" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "168.721" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2005" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "148.137" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "85.089" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.952" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "15.735" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "174.879" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2006" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "136.577" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "87.943" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "7.625" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.672" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "171.718" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2007" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "128.276" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "89.702" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "3.126" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.61" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "180.51" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2008" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "122.662" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "99.335" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "3.914" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.926" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "174.563" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2009" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "115.454" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "103.748" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.424" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "16.929" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "159.859" }
+      } ,
+      {
+        "year": { "type": "literal" , "value": "2010" } ,
+        "Oil_millSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "104.432" } ,
+        "Gas_billSm": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "106.352" } ,
+        "NGL_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "4.121" } ,
+        "Condensate_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "15.457" } ,
+        "Water_millSm3": { "datatype": "http://www.w3.org/2001/XMLSchema#float" , "type": "typed-literal" , "value": "158.212" }
+      }
+    ]
+  }
+}

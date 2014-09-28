@@ -10,6 +10,7 @@ jQuery(document).ready(function($) {
   var jsonResult = {};
   var jqxhrSubmit;
 
+  var $endpointURL = $('#endpoint-url');
   var $querySelect = $('#query-select');
   var $queryNamespaces = $('.query-namespaces');
 
@@ -119,8 +120,8 @@ jQuery(document).ready(function($) {
   var $queryResult;
 
   // Loads the results from a JSON file.
-  // data/npd.json
-  $.getJSON('data/npd.json', function(data) {
+  // conf/npd.json
+  $.getJSON('conf/npd.json', function(data) {
     handleQueryResults(data);
   });
 
@@ -224,6 +225,8 @@ jQuery(document).ready(function($) {
 
   $queryForm.submit(function (event) {
     event.preventDefault();
+
+    console.log($endpointURL.val());
 
     // var environmentParameters = retrieveQueryFields();
     //var jqxhr = sendSPARQLQuery(environmentParameters);
