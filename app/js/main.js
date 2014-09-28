@@ -257,10 +257,10 @@ jQuery(document).ready(function($) {
       'json'
     )
     .success(function (data) {
-      console.log(data);
       $('#wait-modal').modal('hide');
       $('#alert-modal').modal('hide');
       $('a[href="#visualization"]').tab('show');
+      handleQueryResults(data);
       console.log(timestamp + " SUCCESS");
     })
     .error(function (xhr, ajaxOptions, thrownError) {
