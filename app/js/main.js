@@ -119,12 +119,6 @@ jQuery(document).ready(function($) {
 
   var $queryResult;
 
-  // Loads the results from a JSON file.
-  // conf/npd.json
-  $.getJSON('conf/npd.json', function(data) {
-    handleQueryResults(data);
-  });
-
   function handleQueryResults (data) {
     $queryResult = data;
 
