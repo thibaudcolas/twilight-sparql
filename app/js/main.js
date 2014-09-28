@@ -223,6 +223,8 @@ jQuery(document).ready(function($) {
     var endpoint = $endpointURL.val();
     console.log(endpoint);
 
+    $('#wait-modal').modal('show');
+
     if (endpoint) {
       sendSPARQLQuery({
         endpoint: endpoint,
@@ -232,8 +234,6 @@ jQuery(document).ready(function($) {
       });
     }
     else {
-      $('#wait-modal').modal('show');
-
       var $selected = $querySelect.find(':selected');
       var queryIndex = $selected.attr('data-index');
       var results = defaultQueries.queries[queryIndex].result;
