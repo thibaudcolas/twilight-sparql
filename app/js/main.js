@@ -210,7 +210,7 @@ jQuery(document).ready(function($) {
     displayQuery = displayQuery.substring(displayQuery.indexOf('SELECT'));
 
     htmlHistoryItem += '<time class="add-on history-timestamp">'+item.timestamp+'</time>';
-    htmlHistoryItem += '<input type="text" data-query="'+item.query+'" data-env="'+itemEnvironment+'" value="'+displayQuery+'" id="history-item'+index+'" class="history-query span3" disabled/>';
+    htmlHistoryItem += '<input type="text" data-query="'+item.query+'" value="'+displayQuery+'" id="history-item'+index+'" class="history-query span3" disabled/>';
     htmlHistoryItem += '<button class="btn history-btn" type="button">Reuse</button>';
 
     $('.history-items').append('<div class="row-fluid"><div class="input-prepend input-append span12">'+htmlHistoryItem+'</div></div>');
