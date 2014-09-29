@@ -190,13 +190,15 @@
   </div>
 
   <script src="//www.google.com/jsapi"></script>
-  <!-- default.js is jquery + bootstrap + d3 + datatables + codemirror combined. -->
-  <script src="scripts/lib/default.js"></script>
   <script type="text/javascript">
     // Tells the Google Loader what to load from the Visualization API.
     google.load('visualization', '1.0', {'packages':['corechart','geochart','map']});
   </script>
+
+  <!-- build:js scripts/main.min.js -->
+  <script src="scripts/lib/default.js"></script>
   <script src="scripts/visualization.js"></script>
   <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
 </html>
