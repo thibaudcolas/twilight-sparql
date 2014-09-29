@@ -1,181 +1,179 @@
 <!DOCTYPE html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-        <title>Sparkle Dash — Featherweight edition</title>
+  <title>Sparkle Dash — Featherweight edition</title>
 
-        <meta name="description" content="Sparkle Dash, the SPARQL Dashboard">
-        <meta name="viewport" content="width=device-width">
+  <meta name="description" content="Sparkle Dash, the SPARQL Dashboard">
+  <meta name="viewport" content="width=device-width">
 
-        <link rel="favicon" href="favicon.ico">
+  <!-- lib.css contains all the lib/ stylesheets concatenated. -->
+  <link rel="stylesheet" href="css/lib.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+  <!-- container-fluid = Responsive layout. -->
+  <div id="content" class="container-fluid">
+    <header>
+      <span class="f1 pull-left"></span>
+      <span class="f2 pull-left"></span>
+      <span class="f3 pull-left"></span>
 
-        <!-- lib.css contains all the lib/ stylesheets concatenated. -->
-        <link rel="stylesheet" href="css/lib.css">
-        <link rel="stylesheet" href="css/main.css">
-    </head>
-    <body>
-        <!-- container-fluid = Responsive layout. -->
-        <div id="content" class="container-fluid">
-            <header>
-                <span class="f1 pull-left"></span>
-                <span class="f2 pull-left"></span>
-                <span class="f3 pull-left"></span>
+      <a href="https://github.com/ThibWeb/sparkle-dash"><img style="position: absolute; top: 0; right: 5%; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
 
-                <a href="https://github.com/ThibWeb/sparkle-dash"><img style="position: absolute; top: 0; right: 5%; border: 0;" src="https://camo.githubusercontent.com/365986a132ccd6a44c23a9169022c0b5c890c387/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png"></a>
+      <h1>Sparkle Dash <small>the SPARQL Dashboard</small></h1>
+    </header>
 
-                <h1>Sparkle Dash <small>the SPARQL Dashboard</small></h1>
-            </header>
+    <div class="tabbable tabs-left">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#query" data-toggle="tab"><i class="icon-search"></i> Query</a></li>
+        <li><a href="#results" data-toggle="tab"><i class="icon-th"></i> Results</a></li>
+        <li><a href="#visualization" data-toggle="tab"><i class="icon-picture"></i> Visualization</a></li>
+        <!--<li><a href="#history" data-toggle="tab"><i class="icon-calendar"></i> History</a></li> -->
+      </ul>
 
-            <div class="tabbable tabs-left">
-                <ul class="nav nav-tabs">
-                    <li class="active"><a href="#query" data-toggle="tab"><i class="icon-search"></i> Query</a></li>
-                    <li><a href="#results" data-toggle="tab"><i class="icon-th"></i> Results</a></li>
-                    <li><a href="#visualization" data-toggle="tab"><i class="icon-picture"></i> Visualization</a><!-- </li>
-                    <li><a href="#history" data-toggle="tab"><i class="icon-calendar"></i> History</a></li> -->
+      <div class="tab-content">
+        <div class="tab-pane active" id="query">
+          <form class="row-fluid" method="get" name="query-form" id="query-form">
+
+            <fieldset class="span7">
+              <div class="control-group">
+                <input type="text" id="endpoint-url" class="input-block-level" value="http://dbpedia.org/sparql" placeholder="Empty field = dummy results">
+                <!-- This select is populated with a JSON file at runtime. -->
+                <select id="query-select">
+                </select>
+                <!-- This textarea is handled by Code Mirror and populated at runtime. -->
+                <textarea id="query-editor" name="query">
+                </textarea>
+              </div>
+            </fieldset>
+
+            <fieldset class="span3">
+              <!-- Oddly placed SEND QUERY button. -->
+              <div class="control-group">
+                <button type="submit" class="btn btn-block btn-primary">Send</button>
+              </div>
+              <!-- Parameters to customize our query execution. -->
+              <div class="control-group">
+              <!-- <label for="set-limit" class="checkbox">
+                  <input type="checkbox" id="set-limit" name="set-limit" value="true" checked/>
+                  Limit to the first 500 results
+                </label> -->
+              </div>
+
+              <hr/>
+
+              <!-- A handy little box using the prefix.cc API to add prefixes to our queries. -->
+              <div class="control-group">
+                <div class="input-prepend input-append">
+                  <span class="add-on"><i class="icon-plus"></i></span>
+                  <input id="prefix-text" type="text" placeholder="Enter a namespace to add" form="test-no-form-exists"/>
+                  <button id="prefix-button" class="btn" type="button">Go !</button>
+                </div>
+
+                <h5>Referenced Namespaces</h5>
+                <!-- This list is populated by links to our current namespaces at runtime. -->
+                <ul class="query-namespaces">
                 </ul>
-
-                <div class="tab-content">
-                    <div class="tab-pane active" id="query">
-                        <form class="row-fluid" method="get" name="query-form" id="query-form">
-
-                            <fieldset class="span7">
-                                <div class="control-group">
-                                    <input type="text" id="endpoint-url" class="input-block-level" value="http://dbpedia.org/sparql" placeholder="Empty field = dummy results">
-                                    <!-- This select is populated with a JSON file at runtime. -->
-                                    <select id="query-select">
-                                    </select>
-                                    <!-- This textarea is handled by Code Mirror and populated at runtime. -->
-                                    <textarea id="query-editor" name="query">
-                                    </textarea>
-                                </div>
-                            </fieldset>
-
-                            <fieldset class="span3">
-                                <!-- Oddly placed SEND QUERY button. -->
-                                <div class="control-group">
-                                    <button type="submit" class="btn btn-block btn-primary">Send</button>
-                                </div>
-                                <!-- Parameters to customize our query execution. -->
-                                <div class="control-group">
-                                    <!-- <label for="set-limit" class="checkbox">
-                                        <input type="checkbox" id="set-limit" name="set-limit" value="true" checked/>
-                                        Limit to the first 500 results
-                                    </label> -->
-                                </div>
-
-                                <hr/>
-
-                                <!-- A handy little box using the prefix.cc API to add prefixes to our queries. -->
-                                <div class="control-group">
-                                    <div class="input-prepend input-append">
-                                        <span class="add-on"><i class="icon-plus"></i></span>
-                                        <input id="prefix-text" type="text" placeholder="Enter a namespace to add" form="test-no-form-exists"/>
-                                        <button id="prefix-button" class="btn" type="button">Go !</button>
-                                    </div>
-
-                                    <h5>Referenced Namespaces</h5>
-                                    <!-- This list is populated by links to our current namespaces at runtime. -->
-                                    <ul class="query-namespaces">
-                                    </ul>
-                                </div>
-                            </fieldset>
-                        </form>
-                    </div>
-
-                    <!-- Modal -->
-                    <div id="wait-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="wait-modal-label" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="wait-modal-label">The query is being processed by the server</h3>
-                        </div>
-                        <div class="modal-body row-fluid">
-                            <img class="span4 offset4" src="images/loader.gif">
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Dismiss</button>
-                        </div>
-                    </div>
-
-                    <!-- Modal -->
-                    <div id="alert-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alert-modal-label" aria-hidden="true">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                            <h3 id="alert-modal-label">Server error</h3>
-                        </div>
-                        <div class="modal-body">
-                            <div class="alert alert-error">
-                                <p id="alert-modal-message"></p>
-                            </div>
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn" data-dismiss="modal" aria-hidden="true">Dismiss</button>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" id="results">
-                        <!-- Uses the DataTables plugin. -->
-                        <table class="observation-table table table-striped table-condensed table-bordered">
-                            <thead>
-                                <!-- Filled when the query results are returned. -->
-                                <tr class="results-columns">
-                                </tr>
-                            </thead>
-                            <!-- Filled when the query results are returned. -->
-                            <tbody class="results-rows">
-                                <!-- Emmet FTW ! -->
-                                <!-- tr*15>td*3>lorem2 -->
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="tab-pane" id="visualization">
-                        <div id="google-chart" style="height:350px"></div>
-                        <div class="input-prepend input-append">
-                            <span class="add-on"><i class="icon-refresh"></i></span>
-                            <select name="type" id="chart-type-select"></select>
-                            <p class="add-on">Refresh</p>
-                        </div>
-                    </div>
-
-                    <div class="tab-pane" id="history">
-                        <div class="row-fluid history-header">
-                            <div class="span2">
-                                <h5><i class="icon-time"></i> Timestamp</h5>
-                            </div>
-                            <div class="span4">
-                                <h5><i class="icon-search"></i> Query</h5>
-                            </div>
-                            <div class="span6">
-                                <h5><i class="icon-cog"></i> Environment</h5>
-                            </div>
-                        </div>
-                        <div class="history-items">
-                            <!-- Retrieved at runtime. -->
-                        </div>
-
-                    </div>
-                </div>
-            </div>  <!-- /container -->
-
-            <footer>
-                <div class="container">
-                    <hr/>
-                    <p>By <a href="https://github.com/thibweb/">Thibaud Colas</a> &copy; 2014.</p>
-                </div>
-            </footer>
-
+              </div>
+            </fieldset>
+          </form>
         </div>
 
-        <script src="//www.google.com/jsapi"></script>
-        <!-- default.js is jquery + bootstrap + d3 + datatables + codemirror combined. -->
-        <script src="js/lib/default.js"></script>
-        <script type="text/javascript">
-            // Tells the Google Loader what to load from the Visualization API.
-            google.load('visualization', '1.0', {'packages':['corechart','geochart','map']});
-        </script>
-        <script src="js/visualization.js"></script>
-        <script src="js/main.js"></script>
-    </body>
+        <!-- Modal -->
+        <div id="wait-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="wait-modal-label" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="wait-modal-label">The query is being processed by the server</h3>
+          </div>
+          <div class="modal-body row-fluid">
+            <img class="span4 offset4" src="images/loader.gif">
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Dismiss</button>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="alert-modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="alert-modal-label" aria-hidden="true">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="alert-modal-label">Server error</h3>
+          </div>
+          <div class="modal-body">
+            <div class="alert alert-error">
+              <p id="alert-modal-message"></p>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Dismiss</button>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="results">
+          <!-- Uses the DataTables plugin. -->
+          <table class="observation-table table table-striped table-condensed table-bordered">
+            <thead>
+              <!-- Filled when the query results are returned. -->
+              <tr class="results-columns">
+              </tr>
+            </thead>
+            <!-- Filled when the query results are returned. -->
+            <tbody class="results-rows">
+              <!-- Emmet FTW ! -->
+              <!-- tr*15>td*3>lorem2 -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tab-pane" id="visualization">
+          <div id="google-chart" style="height:350px"></div>
+          <div class="input-prepend input-append">
+            <span class="add-on"><i class="icon-refresh"></i></span>
+            <select name="type" id="chart-type-select"></select>
+            <p class="add-on">Refresh</p>
+          </div>
+        </div>
+
+        <div class="tab-pane" id="history">
+          <div class="row-fluid history-header">
+            <div class="span2">
+              <h5><i class="icon-time"></i> Timestamp</h5>
+            </div>
+            <div class="span4">
+              <h5><i class="icon-search"></i> Query</h5>
+            </div>
+            <div class="span6">
+              <h5><i class="icon-cog"></i> Environment</h5>
+            </div>
+          </div>
+          <div class="history-items">
+            <!-- Retrieved at runtime. -->
+          </div>
+
+        </div>
+      </div>
+    </div>  <!-- /container -->
+
+    <footer>
+      <div class="container">
+        <hr/>
+        <p>By <a href="https://github.com/thibweb/">Thibaud Colas</a> &copy; 2014.</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="//www.google.com/jsapi"></script>
+  <!-- default.js is jquery + bootstrap + d3 + datatables + codemirror combined. -->
+  <script src="js/lib/default.js"></script>
+  <script type="text/javascript">
+    // Tells the Google Loader what to load from the Visualization API.
+    google.load('visualization', '1.0', {'packages':['corechart','geochart','map']});
+  </script>
+  <script src="js/visualization.js"></script>
+  <script src="js/main.js"></script>
+</body>
 </html>
