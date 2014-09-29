@@ -28,19 +28,19 @@ jQuery(document).ready(function($) {
   });
 
   // Plugin to match selected tokens.
-  queryEditor.on("cursorActivity", function() {
+  queryEditor.on("cursorActivity", function () {
     queryEditor.matchHighlight("CodeMirror-matchhighlight");
   });
 
   // At each query change, we must reload the editor with the new query and reload the namespaces.
-  $querySelect.change(function(e){
+  $querySelect.change(function (e){
     var $selected = $(this).find(':selected');
     queryEditor.setValue($selected.attr('data-query'));
     reloadReferencedNamespaces();
   });
 
   // Loads the queries from a JSON file.
-  $.getJSON('conf/queries.json', function(data) {
+  $.getJSON('queries.json', function (data) {
     var firstQuery;
 
     defaultQueries = data;
@@ -187,15 +187,10 @@ jQuery(document).ready(function($) {
   }
 
   // TODO. Here, history is combined with the json file and localStorage.
-  $.getJSON('conf/history.json', function(data) {
-    var storageData = storageGetJSON(historyKey);
-    for (var i = storageData.items.length - 1; i >= Math.max(0, storageData.items.length - 6); i--) {
-      addHistoryItem(storageData.items[i], i);
-    }
-    for (var j = data.items.length - 1; j >= Math.max(0, data.items.length - 6); j--) {
-      addHistoryItem(data.items[j], j);
-    }
-  });
+  var storageData = storageGetJSON(historyKey);
+  for (var i = storageData.items.length - 1; i >= Math.max(0, storageData.items.length - 6); i--) {
+    addHistoryItem(storageData.items[i], i);
+  }
 
   // Take a history item and create its HTML (a big appended preppended textfield).
   function addHistoryItem(item, index) {
