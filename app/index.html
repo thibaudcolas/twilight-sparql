@@ -7,7 +7,10 @@
   <title>Sparkle Dash — The SPARQL Dashboard</title>
 
   <!-- build:css styles/main.min.css -->
-  <link rel="stylesheet" href="styles/lib.css">
+  <link rel="stylesheet" href="vendor/bootstrap.min.css">
+  <link rel="stylesheet" href="vendor/dataTables.bootstrap.css">
+  <link rel="stylesheet" href="vendor/codemirror.css">
+  <link rel="stylesheet" href="vendor/elegant.css">
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
@@ -196,7 +199,16 @@
   </script>
 
   <!-- build:js scripts/main.min.js -->
-  <script src="scripts/lib/default.js"></script>
+  <script src="vendor/jquery-1.9.0.min.js"></script>
+  <script src="vendor/bootstrap.min.js"></script>
+  <script src="vendor/codemirror/codemirror.js"></script>
+  <script src="vendor/codemirror/match-highlighter.js"></script>
+  <script src="vendor/codemirror/matchbrackets.js"></script>
+  <script src="vendor/codemirror/searchcursor.js"></script>
+  <script src="vendor/codemirror/sparql.js"></script>
+  <script src="vendor/jquery.dataTables.min.js"></script>
+  <script src="vendor/dataTables.bootstrap.js"></script>
+  <script src="vendor/d3.v3.min.js"></script>
   <script src="scripts/visualization.js"></script>
   <script src="scripts/main.js"></script>
   <!-- endbuild -->
