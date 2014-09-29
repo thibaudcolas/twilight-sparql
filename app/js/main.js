@@ -34,8 +34,8 @@ jQuery(document).ready(function($) {
 
   // At each query change, we must reload the editor with the new query and reload the namespaces.
   $querySelect.change(function(e){
-    selected = $(this).find(':selected');
-    queryEditor.setValue(selected.attr('data-query'));
+    var $selected = $(this).find(':selected');
+    queryEditor.setValue($selected.attr('data-query'));
     reloadReferencedNamespaces();
   });
 
@@ -248,7 +248,7 @@ jQuery(document).ready(function($) {
     queryParameters['timestamp'] = timestamp;
     console.log("SPARQL Query " + timestamp);
 
-    var queryURL = encodeURI(queryParameters.endpoint + '?query=' + queryParameters.query + '&timeout=1000&should-sponge=grab-all&default-graph-uri=http://dbpedia.org');
+    var queryURL = queryParameters.endpoint + '?query=' + encodeURIComponent(queryParameters.query) + '&timeout=10000&should-sponge=grab-all&default-graph-uri=' + encodeURIComponent('http://dbpedia.org');
     console.log(queryURL);
     console.log(queryParameters.query);
     var jqxhr = $.get(queryURL,
