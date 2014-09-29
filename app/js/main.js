@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
- // "use strict";
+ "use strict";
 
   /**
    * Query
@@ -59,13 +59,13 @@ jQuery(document).ready(function($) {
   // Manages extracting namespace URIs from the query string.
   function extractNamespaces(queryString) {
     queryString = queryString.split('SELECT')[0];
-    namespaces = queryString.match(/ (.*?): <(.*?)>/mg);
-    return namespaces;
+    return queryString.match(/ (.*?): <(.*?)>/mg);
   }
 
   // Transforms namespace URIs into links pointing to documentations.
   function displayNamespacesURLs(queryString) {
-    namespaces = extractNamespaces(queryString);
+    var prefix;
+    var namespaces = extractNamespaces(queryString);
     $queryNamespaces.empty();
     for (var i = 0; i < namespaces.length; i++) {
       prefix = namespaces[i].replace(/>/,'').split(/: </);
@@ -248,8 +248,10 @@ jQuery(document).ready(function($) {
     queryParameters['timestamp'] = timestamp;
     console.log("SPARQL Query " + timestamp);
 
-    // var jqxhr : contains the AJAX query.
-    var jqxhr = $.get(encodeURI(queryParameters.endpoint + '?query=' + queryParameters.query + '&timeout=1000&should-sponge=grab-all&default-graph-uri=http://dbpedia.org'),
+    var queryURL = encodeURI(queryParameters.endpoint + '?query=' + queryParameters.query + '&timeout=1000&should-sponge=grab-all&default-graph-uri=http://dbpedia.org');
+    console.log(queryURL);
+    console.log(queryParameters.query);
+    var jqxhr = $.get(queryURL,
       function (data) {
 
       },
