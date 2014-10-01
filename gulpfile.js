@@ -141,8 +141,8 @@ gulp.task('serve:dist', ['default'], function () {
   });
 });
 
-// Build Production Files, the Default Task
-gulp.task('default', ['clean'], function (cb) {
+// Build Production Files
+gulp.task('build', ['clean'], function (cb) {
   runSequence('styles', ['html', 'images', 'fonts', 'copy'], cb);
 });
 
@@ -153,15 +153,17 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://thibweb.github.io/sparkle-dash/',
+  url: 'https://thibweb.github.io/twilight-sparql/',
   strategy: 'mobile'
 }));
 
 // Deploy to GitHub Pages.
 gulp.task('deploy', function () {
   gulp.src('dist/**/*')
-    .pipe(deploy('git@github.com:ThibWeb/sparkle-dash.git', 'origin'));
+    .pipe(deploy('git@github.com:ThibWeb/twilight-sparql.git', 'origin'));
 });
+
+gulp.task('default', ['build']);
 
 // Load custom tasks from the `tasks` directory
 try { require('require-dir')('tasks'); } catch (err) {}
