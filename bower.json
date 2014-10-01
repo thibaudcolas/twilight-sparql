@@ -6,6 +6,7 @@
   "dependencies": {
     "bootstrap-css": "2.3.2",
     "jquery": "1.9.0",
-    "codemirror": "~4.6.0"
+    "codemirror": "~4.6.0",
+    "d3": "v3.0.3"
   }
 }
