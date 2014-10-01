@@ -1,8 +1,8 @@
 {
-  "name": "sparkle-dash",
+  "name": "twilight-sparql",
   "version": "0.1.0",
-  "homepage": "https://github.com/ThibWeb/sparkle-dash",
-  "description": "Sparkle Dash, the SPARQL Dashboard",
+  "homepage": "https://github.com/ThibWeb/twilight-sparql",
+  "description": "Twilight SPARQL, the SPARQL Dashboard",
   "dependencies": {
     "bootstrap-css": "2.3.2",
     "jquery": "1.9.0",

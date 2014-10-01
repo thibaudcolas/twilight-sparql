@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$TRAVIS_REPO_SLUG" == "ThibWeb/sparkle-dash" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
+if [ "$TRAVIS_REPO_SLUG" == "ThibWeb/twilight-sparql" ] && [ "$TRAVIS_BRANCH" == "master" ]; then
 
   echo -e "Deploying to GitHub Pages...\n"
 
@@ -11,7 +11,7 @@ if [ "$TRAVIS_REPO_SLUG" == "ThibWeb/sparkle-dash" ] && [ "$TRAVIS_BRANCH" == "m
   git init .
   git add -f .
   git commit -m "Travis deploy $TRAVIS_BUILD_NUMBER to gh-pages"
-  git push -fq "https://${GH_TOKEN}@github.com/ThibWeb/sparkle-dash" "master:gh-pages"
+  git push -fq "https://${GH_TOKEN}@github.com/ThibWeb/twilight-sparql" "master:gh-pages"
 
   echo -e "Finished deploy to GitHub Pages...\n"
 

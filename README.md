@@ -1,7 +1,7 @@
-[Sparkle Dash, the SPARQL Dashboard](http://thibweb.github.io/sparkle-dash) [![Build Status](https://travis-ci.org/ThibWeb/sparkle-dash.svg?branch=master)](https://travis-ci.org/ThibWeb/sparkle-dash) [![devDependency Status](https://david-dm.org/ThibWeb/sparkle-dash/dev-status.svg)](https://david-dm.org/ThibWeb/sparkle-dash#info=devDependencies)
+[Twilight SPARQL, the SPARQL Dashboard](http://thibweb.github.io/twilight-sparql) [![Build Status](https://travis-ci.org/ThibWeb/twilight-sparql.svg?branch=master)](https://travis-ci.org/ThibWeb/twilight-sparql) [![devDependency Status](https://david-dm.org/ThibWeb/twilight-sparql/dev-status.svg)](https://david-dm.org/ThibWeb/twilight-sparql#info=devDependencies)
 ============
 
-> Sparkle Dash, the SPARQL Dashboard
+> Twilight SPARQL, the SPARQL Dashboard
 
 ## Tooling
 
