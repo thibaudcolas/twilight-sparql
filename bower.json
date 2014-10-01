@@ -4,5 +4,8 @@
   "homepage": "https://github.com/ThibWeb/sparkle-dash",
   "description": "Sparkle Dash, the SPARQL Dashboard",
   "dependencies": {
+    "bootstrap-css": "2.3.2",
+    "jquery": "1.9.0",
+    "codemirror": "~4.6.0"
   }
 }

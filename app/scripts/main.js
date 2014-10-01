@@ -27,11 +27,6 @@ jQuery(document).ready(function($) {
     theme: "elegant"
   });
 
-  // Plugin to match selected tokens.
-  queryEditor.on("cursorActivity", function () {
-    queryEditor.matchHighlight("CodeMirror-matchhighlight");
-  });
-
   // At each query change, we must reload the editor with the new query and reload the namespaces.
   $querySelect.change(function (e){
     var $selected = $(this).find(':selected');
