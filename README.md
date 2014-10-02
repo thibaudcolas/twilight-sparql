@@ -13,8 +13,6 @@ $ gulp serve
 
 ## TODO
 
-- http://notes.3kbo.com/sparql-geolocation
-
 ## License
 
 Copyright 2014 Thibaud Colas
