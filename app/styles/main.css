@@ -34,8 +34,8 @@ body:before {
 
 h1 {
   font-size:300%;
-  color:peru;
-  text-shadow:0 0 1px saddlebrown, 2px 2px 0 burlywood, 2px 2px 1px rgba(0, 0, 0, 0.5);
+  color:pink;
+  text-shadow:0 0 1px magenta, 2px 2px 0 violet, 2px 2px 1px rgba(0, 0, 0, 0.5);
   line-height: 1.2;
   letter-spacing: 3px;
   width: 100%;
