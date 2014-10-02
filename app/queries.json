@@ -2,9 +2,9 @@
   "queries": [
     {
       "name": "default",
-      "title": "Number of entities per class",
+      "title": "DBpedia - Number of entities per class",
       "description": "The count example",
-      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\n# Number of entities per RDF type.\n\nSELECT ?type (count(?s) AS ?nbEntities)\nWHERE {\n  ?s rdf:type ?type\n}\nGROUP BY ?type\nORDER BY DESC(?nbEntities)",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\n\n# Number of entities per RDF type.\n\nSELECT ?type (count(?s) AS ?nbEntities)\nWHERE {\n  ?s rdf:type ?type\n}\nGROUP BY ?type\nORDER BY DESC(?nbEntities)\nLimit 10",
       "result": {
         "head": {
           "vars": [ "type" , "nbEntities" ]
@@ -104,8 +104,15 @@
       }
     },
     {
+      "name": "dbpedia-2",
+      "title": "DBpedia - Capitals of the world",
+      "description": "Geo example",
+      "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX geo: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;\nPREFIX dbo: &lt;http://dbpedia.org/ontology/&gt;\n\nSELECT distinct ?caplat ?caplong ?capital\nWHERE {\n  ?country rdf:type dbo:Country .\n  ?country  dbo:capital ?capital .\n  OPTIONAL {\n    ?capital geo:lat ?caplat ;\n      geo:long ?caplong .\n  }\n}\nORDER BY ?country\n",
+      "result": {}
+    },
+    {
       "name": "disabled-department",
-      "title": "Number of disabled-friendly transport services per department",
+      "title": "Local - Number of disabled-friendly transport services per department",
       "description": "Number of disabled-friendly transport services per department",
       "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of disabled-friendly transport services per department.\n# Uses ARQ Syntax (for COUNT)\n\nSELECT ?department (COUNT(?desc) AS ?nbServices)\nWHERE {\n  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .\n  ?desc passim:department ?dep .\n  ?dep geo:nom ?department\n}\nGROUP BY ?department\nORDER BY DESC(?nbServices)",
       "result": {
@@ -480,7 +487,7 @@
     },
     {
       "name": "disabled-region",
-      "title": "Number of disabled-friendly transport services per region",
+      "title": "Local - Number of disabled-friendly transport services per region",
       "description": "Number of disabled-friendly transport services per region",
       "string": "PREFIX passim: &lt;http://data.lirmm.fr/ontologies/passim#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of disabled-friendly transport services per region.\n# Uses ARQ Syntax (for COUNT)\n\nSELECT ?region (COUNT(?desc) AS ?nbServices)\nWHERE {\n  ?desc passim:isAccessibilityForDisabledPerson 'Oui' .\n  ?desc passim:region ?reg .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region\nORDER BY DESC(?nbServices)",
       "result": {
@@ -583,7 +590,7 @@
     },
     {
       "name": "cities",
-      "title": "Cities where more than 1'000 homes pay the ISF",
+      "title": "Local - Cities where more than 1'000 homes pay the ISF",
       "description": "Cities with a good ratio of ISF taxpayers per population",
       "string": "PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Cities where more than 1000 families paid the ISF in 2010.\n\nSELECT ?ville ?nbRedevables\nWHERE {\n  ?impot vocab:impot_annee 2010 .\n  ?impot vocab:impot_nbredevables ?nbRedevables .\n  FILTER (?nbRedevables &gt; 1000) .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?com geo:nom ?ville\n}\nORDER BY DESC(?nbRedevables)",
       "result": {
@@ -690,7 +697,7 @@
     },
     {
       "name": "highest-nbtaxpayers",
-      "title": "Number of ISF taxpayers per region per year + France as a whole.",
+      "title": "Local - Number of ISF taxpayers per region per year + France as a whole.",
       "description": "Number of ISF taxpayers per region per year + France as a whole.",
       "string": "\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Number of families who paid ISF in each region each year + total for all of France.\n\nSELECT ?region ?annee (SUM(?nbR) AS ?nbRedevables)\nWHERE {\n  ?impot vocab:impot_annee ?annee .\n  ?impot vocab:impot_nbredevables ?nbR .\n  ?impot vocab:impot_codeinsee ?codecom .\n  ?com geo:code_commune ?codecom .\n  ?dep geo:chef-lieu ?com .\n  ?reg geo:subdivision ?dep .\n  ?reg geo:nom ?region\n}\nGROUP BY ?region ?annee\nORDER BY DESC(?nbRedevables)",
       "result": {
@@ -1335,7 +1342,7 @@
     },
     {
       "name": "coordinates",
-      "title": "A query that returns coordinates",
+      "title": "Local - A query that returns coordinates",
       "description": "A query that returns coordinates",
       "string": "PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\nPREFIX wgs84: &lt;http://www.w3.org/2003/01/geo/wgs84_pos#&gt;\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\nPREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\nPREFIX vocab: &lt;http://impot.org/ontology#&gt;\n# A query that returns coordinates.\nSELECT ?lat ?long ?population\nWHERE {\n  ?feature gn:population ?population .\n  ?feature wgs84:lat ?lat .\n  ?feature wgs84:long ?long .\n}\nORDER BY DESC(?population)",
       "result": {
@@ -1945,7 +1952,7 @@
     },
     {
       "name": "forcegraph",
-      "title": "Test of the D3 force graph",
+      "title": "Local D3 - Test of the D3 force graph",
       "description": "Test of the D3 force graph",
       "string": "\nPREFIX geo: &lt;http://rdf.insee.fr/geo/&gt;\n\n# Test of the D3 Force Graph.\n\nSELECT ?sup ?reg\nWHERE {\n  ?sup geo:subdivision ?sub .\n  ?sub a geo:Region .\n  ?sub geo:nom ?reg\n}",
       "result": {
@@ -2064,7 +2071,7 @@
     },
     {
       "name": "forcegraphbis",
-      "title": "A beautiful D3 force graph",
+      "title": "Local D3 - A beautiful D3 force graph",
       "description": "Test of the D3 force graph - Next level",
       "string": "\nPREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;\nPREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;\nPREFIX gn: &lt;http://www.geonames.org/ontology#&gt;\n\n# Produces a really beautiful D3 graph of France, its region and its departments.\n\nSELECT ?feature ?parent ?popfeature ?popparent\nWHERE {\n  ?feature gn:parentFeature ?parent .\n  ?feature gn:population ?popfeature .\n  ?parent gn:population ?popparent\n}",
       "result": {
@@ -2787,7 +2794,7 @@
     },
     {
       "name": "npd",
-      "title": "NPD query #1",
+      "title": "Local biggest - NPD query #1",
       "description": "NPD query #1",
       "string": "#1",
       "result": {
