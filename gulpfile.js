@@ -103,7 +103,9 @@ gulp.task('html', function () {
         /.CodeMirror/,
         /.cm-/,
         /.dataTables/,
-        /.table/
+        /.table/,
+        /.modal/,
+        /.in/
       ]
     })))
     // Concatenate And Minify Styles
