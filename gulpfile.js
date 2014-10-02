@@ -101,7 +101,9 @@ gulp.task('html', function () {
       // CSS Selectors for UnCSS to ignore
       ignore: [
         /.CodeMirror/,
-        /.cm-/
+        /.cm-/,
+        /.dataTables/,
+        /.table/
       ]
     })))
     // Concatenate And Minify Styles
