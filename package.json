@@ -40,6 +40,7 @@
   },
   "private": true,
   "scripts": {
-    "test": "echo 'npm test not implemented'"
+    "start": "gulp serve",
+    "test": "gulp jshint"
   }
 }
