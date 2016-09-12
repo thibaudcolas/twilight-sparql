@@ -1,11 +1,11 @@
 {
   "name": "twilight-sparql",
   "version": "0.1.0",
-  "homepage": "https://github.com/ThibWeb/twilight-sparql",
+  "homepage": "https://github.com/thibaudcolas/twilight-sparql",
   "description": "Twilight SPARQL, the SPARQL Dashboard",
   "repository": {
     "type": "git",
-    "url": "git://github.com/ThibWeb/twilight-sparql"
+    "url": "git://github.com/thibaudcolas/twilight-sparql"
   },
   "devDependencies": {
     "gulp-gh-pages": "^0.3.3",

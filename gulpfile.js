@@ -157,14 +157,14 @@ gulp.task('pagespeed', pagespeed.bind(null, {
   // free (no API key) tier. You can use a Google
   // Developer API key if you have one. See
   // http://goo.gl/RkN0vE for info key: 'YOUR_API_KEY'
-  url: 'https://thibweb.github.io/twilight-sparql/',
+  url: 'https://thibaudcolas.github.io/twilight-sparql/',
   strategy: 'mobile'
 }));
 
 // Deploy to GitHub Pages.
 gulp.task('deploy', function () {
   gulp.src('dist/**/*')
-    .pipe(deploy('git@github.com:ThibWeb/twilight-sparql.git', 'origin'));
+    .pipe(deploy('git@github.com:thibaudcolas/twilight-sparql.git', 'origin'));
 });
 
 gulp.task('default', ['build']);

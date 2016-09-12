@@ -1,7 +1,7 @@
 {
   "name": "twilight-sparql",
   "version": "0.1.0",
-  "homepage": "https://github.com/ThibWeb/twilight-sparql",
+  "homepage": "https://github.com/thibaudcolas/twilight-sparql",
   "description": "Twilight SPARQL, the SPARQL Dashboard",
   "dependencies": {
     "bootstrap-css": "2.3.2",
